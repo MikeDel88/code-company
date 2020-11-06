@@ -1,0 +1,63 @@
+@media screen and (max-width:750px){
+    /* Changement taille de titre */
+    h1{
+        font-size: 40px;
+    }
+    /* Espacement et centrage */
+    .portfolio-container a{
+        margin-bottom: 20px;
+    }
+    .foot{
+        justify-content: center;
+    }
+    .networks{
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:650px){
+    /* Position static du menu */
+    .fond-header{
+        position: static;
+    }
+    .banniere{
+        margin-top:0;
+    }
+    /* aligner le menu */
+    .header-nav{
+        justify-content: center;
+    }
+    /* changement sur navigation */
+    nav{
+        padding: 20px 0;
+    }
+    nav a{
+        text-transform: lowercase;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    .navigation li:first-child{
+        border-right: none;
+    }
+    .navigation li:nth-child(2){
+        border-left: none;
+    }
+    /* réduction bouton */
+    header .btn{
+        padding: 5px 30px;
+        font-size: 12px;
+    }
+    /* élargissement du texte */
+    .sub-title p, .profil .sub-title{
+        width:90%;
+    }
+    .networks{
+       min-width: 100%;
+       flex-direction: column;
+       align-items: center;
+    }
+    .logo{
+        margin-top:20px;
+    }
+}

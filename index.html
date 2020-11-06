@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Direction gauche et langue anglaise -->
+<html dir="ltr" lang="en">
+
+    <head>
+        <!-- Encodage -->
+        <meta charset="UTF-8" />
+        <!-- adaptation mobile -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google robot description du site -->
+        <meta name="description"
+            content="Code Company, une entreprise d'exception pour tous vos projets, les meilleurs sur terre" />
+        <!-- Google Fonts Robot Light / Regular / Medium / Bold -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <!-- title -->
+        <title>Code Company - Real and Professional Coder</title>
+        <!-- reset css -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Responsive design -->
+        <link rel="stylesheet" href="css/mobile_style.css">
+        <!-- icone de l'onglet -->
+        <link rel="shortcut icon" href="favicon.ico" />
+        <!--[if lt IE 9]>
+    <script
+src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js">
+</script>
+    <![endif]-->
+    </head>
+
+    <body>
+        <!-- Header du site -->
+        <header>
+            <!-- Bloc qui contient le bandeau fixe -->
+            <div class="fond-header">
+                <!-- Container du logo et navigation -->
+                <div class="container header-nav flex flex-between flex-align-center">
+                    <a class="logo-title" href="index.html"><img src="img/logo.png" alt="Logo du site"></a>
+                    <nav>
+                        <ul class="navigation flex">
+                            <li><a href="index.html">homepage</a></li>
+                            <li><a href="#team">our team</a></li>
+                            <li><a href="#portfolio">portfolio</a></li>
+                            <li><a href="#contact">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- Bloc qui contient le texte -->
+            <div class="banniere">
+                <div class="container">
+                    <!-- titre de la page -->
+                    <div class="title center">
+                        <h1>Do you need a real coder?</h1>
+                        <p><strong>we are the best code company on earth</strong>
+                        </p>
+                    </div>
+                    <!-- sous titre + lien -->
+                    <div class="sub-title center">
+                        <p><strong>We work direct with our hands. Also we do a really best graphic designs and our hands
+                                are so
+                                curved.</strong>But don’t worry.
+                            What we promise, that you get. Not just bla bla, like our politics ;)</p>
+                        <!-- Lien ancre pour voir les portfolio -->
+                        <p><a class="btn" href="#portfolio">See our portfolio right now</a></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- contenu principal de la page -->
+        <main>
+            <!-- Section qui contient les profils des codeurs -->
+            <section id="team" class=" container profil center">
+                <h2>This three cute baby faces do for you everything boo boo</h2>
+                <div class="photo-profil flex flex-around">
+                    <article class="box-profil">
+                        <!-- photo de profil balise a en display block pour que tout soit cliquable -->
+                        <a href="#" title="voir son profil">
+                            <img class="img-profil" src="img/sonjoe.jpg" alt="Sonjoe">
+                            <!-- son nom -->
+                            <h3 class="profil-name">Sonjoe</h3>
+                            <!-- ses compétences -->
+                            <p class="profil-skill"><strong>UI/UX, Designs, HTML & CSS</strong></p>
+                        </a>
+                    </article>
+                    <article class="box-profil">
+                        <!-- photo de profil -->
+                        <a href="#" title="voir son profil">
+                            <img class="img-profil" src="img/kohut.jpg" alt="Kohut">
+                            <!-- son nom -->
+                            <h3 class="profil-name">Kohut</h3>
+                            <!-- ses compétences -->
+                            <p class="profil-skill"><strong>UI/UX, Designs, HTML5 & CSS3, CMS</strong></p>
+                        </a>
+                    </article>
+                    <article class="box-profil">
+                        <!-- photo de profil -->
+                        <a href="#" title="voir son profil">
+                            <img class="img-profil" src="img/fuxxo.jpg" alt="Fuxxo">
+                            <!-- son nom -->
+                            <h3 class="profil-name">Fuxxo</h3>
+                            <!-- ses compétences -->
+                            <p class="profil-skill"><strong>UI/UX, Designs</strong></p>
+                        </a>
+                    </article>
+                </div>
+                <p class="sub-title">Sometimes we look more better. Especially when we changed our faces in
+                    Photoshop.
+                    If you want an
+                    autogram. No problem.
+                    Just give us a 100 bucks and you can have ;)</p>
+            </section>
+            <div class="fond-portfolio">
+                <!-- Section portfolio -->
+                <section id="portfolio" class="portfolio container center">
+                    <!-- titre et sous-titre -->
+                    <header class="container-title">
+                        <h2>Heeey! Just look on our portfolio. That we are huge</h2>
+                        <p>you know, curved hands are curved hands ;)</p>
+                    </header>
+                    <div class="portfolio-container flex">
+                        <div class="flex flex-around box">
+                            <!-- Liens vers les sites web du portfolio en créant un nouvel onglet -->
+                            <a href="#" title="voir le site" target="_blank"><img class="portfolio-box"
+                                    src="img/siteweb1.jpg" alt="Portfolio1"></a>
+                            <a href="#" title="voir le site" target="_blank"><img class="portfolio-box"
+                                    src="img/siteweb2.jpg" alt="Portfolio2"></a>
+                        </div>
+                        <div class="flex flex-around box">
+                            <a href="#" title="voir le site" target="_blank"><img class="portfolio-box"
+                                    src="img/siteweb3.jpg" alt="Portfolio3"></a>
+                            <a href="#" title="voir le site" target="_blank"><img class="portfolio-box"
+                                    src="img/siteweb4.jpg" alt="Portfolio4"></a>
+                        </div>
+                    </div>
+                    <!-- Liens pour contacter qui renvoie à l'id contact -->
+                    <footer>
+                        <a class="btn" href="#contact">Do you want? Contact us!</a>
+                    </footer>
+                </section>
+            </div>
+            <div class="fond-aside-footer">
+                <aside id="contact" class="container container-title center">
+                    <!-- titre et sous titre de la partie contact -->
+                    <h2>Contact us today and you get a professional code</h2>
+                    <p>our hand curved guys waiting for you</p>
+                    <!-- formulaire de contact -->
+                    <form action="#" method="POST">
+                        <input type="text" name="name" id="name" placeholder="Placeholder name" required>
+                        <input type="email" name="email" id="email" placeholder="Placeholder email" required>
+                        <textarea name="message" id="message" placeholder="Placeholder Message"></textarea>
+                        <input type="submit" class="btn" name="button" id="button" value="Send this message">
+                    </form>
+                </aside>
+            </div>
+        </main>
+        <!-- Footer de la page -->
+        <div class="fond-aside-footer">
+            <footer class="foot container flex flex-between flex-align-center">
+                <div class="networks flex flex-between">
+                    <p class="flex flex-align-center">Follow us on:</p>
+                    <div class="logo flex flex-between">
+                        <a href="#"><img src="img/facebook.png" alt="facebook" title="facebook"></a>
+                        <a href="#"><img src="img/twitter.png" alt="twitter" title="twitter"></a>
+                        <a href="#"><img src="img/linkedin.png" alt="linkedin" title="linkedin"></a>
+                        <a href="#"><img src="img/pinterest.png" alt="pinterest" title="pinterest"></a>
+                        <a href="#"><img src="img/youtube.png" alt="youtube" title="youtube"></a>
+                    </div>
+                </div>
+                <div>
+                    <small>Copyright 2014 &copy; Designed with curved hands by Tempees.com</small>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

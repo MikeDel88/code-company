@@ -1,0 +1,507 @@
+/***************************************************
+GLOBAL
+***************************************************/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    height: auto;
+    border:none;
+}
+
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+figure {
+    margin: 0;
+}
+
+h1,h2,h3,p{
+    margin: 0;
+}
+strong{
+    font-weight: 300;
+}
+
+body {
+    /* police générale*/
+   font-family: 'Roboto', sans-serif; 
+   /* couleur générale */
+   color: #FFF;
+   /* taille par défault */
+   font-size: 15px;
+}
+/***************************************************
+ANIMATIONS
+***************************************************/
+/* animation de bienvenue du titre dans le header  */
+@-webkit-keyframes title{
+    0%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 0;
+    }
+    80%{
+        -webkit-transform: translateY(150px);
+                transform: translateY(150px);
+        opacity: 0.8;
+    }
+    100%{
+        -webkit-transform: translateY(120px);
+                transform: translateY(120px);
+        opacity: 1;
+    }
+}
+@keyframes title{
+    0%{
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        opacity: 0;
+    }
+    80%{
+        -webkit-transform: translateY(150px);
+                transform: translateY(150px);
+        opacity: 0.8;
+    }
+    100%{
+        -webkit-transform: translateY(120px);
+                transform: translateY(120px);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes menu{
+    0%{
+        -webkit-transform: translateX(500px);
+                transform: translateX(500px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes menu{
+    0%{
+        -webkit-transform: translateX(500px);
+                transform: translateX(500px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@-webkit-keyframes logo{
+        0%{
+        -webkit-transform: translateX(-500px);
+                transform: translateX(-500px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+@keyframes logo{
+        0%{
+        -webkit-transform: translateX(-500px);
+                transform: translateX(-500px);
+    }
+    100%{
+        -webkit-transform: translateX(0px);
+                transform: translateX(0px);
+    }
+}
+
+/***************************************************
+STRUCTURE
+***************************************************/
+
+/* Flexbox */
+.flex{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.flex-between{
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.flex-around{
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.flex-align-center{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* Container */
+.container{
+    max-width: 1140px;
+    margin:0 auto;
+}
+/* Titre de la section portfolio et aside */
+.container-title{
+    padding-top: 60px;
+}
+.container-title p{
+    font-size: 18px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+.center{
+    text-align: center;
+}
+
+/* titre sections */
+h2{
+    font-size: 36px;
+    font-weight: 500;
+}
+
+/***************************************************
+HEADER PAGE
+***************************************************/
+
+header{
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bandeau de navigation fixed */
+.fond-header{
+    min-height:100px;
+    background-color: #093347;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 100;
+}
+
+/* Container de navigation */
+.header-nav{
+    min-height:100px;
+}
+nav{
+    -webkit-animation: menu 2s ease;
+            animation: menu 2s ease;
+}
+.logo-title{
+    -webkit-animation: logo 2s ease;
+            animation: logo 2s ease;
+}
+.navigation{
+    text-transform: uppercase;
+}
+/* barre de séparation */
+.navigation li:first-child{
+    border-right: 2px solid #2c101a;
+}
+.navigation li:nth-child(2){
+    border-left: 1px solid #1a4154;
+}
+.navigation a{
+    font-size: 17px;
+    display:block;
+    padding: 10px 20px;
+    margin:0 10px;
+    border-radius: 3px;
+    -webkit-transition: background-color 0.2s linear;
+    -o-transition: background-color 0.2s linear;
+    transition: background-color 0.2s linear;
+}
+.navigation a:hover{
+    background-color: #1f4558;
+    color: #8ebdd6;
+}
+
+/* L'image de fond Header */
+.banniere{
+    min-height:510px;
+    margin-top: 100px;
+    background-image: url('../img/ordinateur.jpg');
+    background-size: cover;
+}
+/* décalage du titre pour le centrer */
+.banniere .container{
+    -webkit-animation: title 4s ease;
+            animation: title 4s ease;
+    -webkit-transform: translateY(120px);
+        -ms-transform: translateY(120px);
+            transform: translateY(120px);
+}
+/* barre de séparation bleu claire */
+.title::after{
+    content:'';
+    display:block;
+    width:480px;
+    height:2px;
+    background-color: #5a8ca7;
+    margin: 30px auto;
+}
+/* titre de la page */
+h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.title p{
+    font-size: 24px;
+    font-weight: 300;
+}
+/* le sous-titre + le lien */
+.sub-title p{
+    font-weight: 300;
+    color: #b4d1e1;
+    width:48%;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+.sub-title p:first-child{
+    padding-top:0;
+}
+/* Les liens de la page */
+.btn{
+    display:inline-block;
+    font-weight: 500;
+    border: 2px solid #FFF;
+    border-radius: 40px;
+    padding: 15px 40px;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+/* pictogramme du lien */
+.btn::after{
+    content:'';
+    display: inline-block;
+    background-image: url(../img/fleche-bas.png);
+    width:18px;
+    height:18px;
+    -webkit-transform: translate(10px, 5px);
+        -ms-transform: translate(10px, 5px);
+            transform: translate(10px, 5px);
+}
+.btn:hover{
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+
+/***************************************************
+SECTION1 PROFIL
+***************************************************/
+
+section.profil{
+    color: #0d415c;
+    padding-top: 70px;
+    padding-bottom: 90px;
+}
+
+/* les paragraphes section profil */
+.profil p{
+    /* */
+    margin: 0 auto;
+    line-height: 1.3em;
+}
+/* le bloc des profils */
+.photo-profil{
+    padding-top: 48px;
+}
+/* les box de profil */
+.box-profil{
+    min-width:300px;
+}
+.box-profil a{
+    display:block;
+    min-height:100px;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 20px 0;
+    -webkit-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+.box-profil a:hover{
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 5px #0d415c;
+            box-shadow: 0px 0px 5px #0d415c;
+}
+.profil-name{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.profil-skill{
+    font-size: 13px;
+    font-weight: 300;
+    width:80%;
+    padding-top: 10px;
+}
+/* Bloc sous titre de la section */
+.profil .sub-title{
+    width:45%; 
+}
+/* barre de séparation au */
+.profil .sub-title::before{
+    content:'';
+    display:block;
+    max-width:480px;
+    height:1px;
+    background-color: #c8d4da;
+    margin: 40px auto;
+}
+
+/***************************************************
+SECTION2 PORTFOLIO
+***************************************************/
+
+/* Couleur de fond de la section */
+.fond-portfolio{
+    background-color: #3ead87;
+}
+/* padding fond du bloc */
+.portfolio{
+    padding-bottom: 60px;
+}
+
+/* Les deux blocs qui contiennent les images */
+.box{
+    width:50%;
+    margin: 80px 0 60px 0;
+}
+.box:nth-child(1){
+    border-right: 2px solid #4ebe97;
+}
+/* Les blocs qui contiennent les images en liens */
+.portfolio-container a, .portfolio-box{
+    border-radius: 50%;
+    border:none;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.portfolio-container a{
+    display:block;
+    background-image: url(../img/plus.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.portfolio-box:hover{
+    opacity: 0.45;
+}
+
+/***************************************************
+ASIDE FORMULAIRE CONTACT
+***************************************************/
+
+.fond-aside-footer{
+    background-color: #213139;
+}
+
+aside{
+    padding-bottom: 90px;
+}
+
+aside form{
+    margin:0 auto;
+    max-width:500px;
+    padding-top: 40px;
+}
+
+input, textarea{
+    display:block;
+    width:100%;
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px 0;
+    border-radius: 30px;
+    outline: none;
+}
+textarea{
+    min-height:180px;
+}
+/* si le champs est valide ou cliqué */
+input:valid, textarea:focus{
+    border: 3px solid #4ebe97;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #8ea6b3;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, input::-moz-placeholder, textarea::-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder, input::-ms-input-placeholder, textarea::-ms-input-placeholder, input::placeholder,textarea::placeholder{
+    color: #8ea6b3;
+}
+
+
+textarea::-webkit-input-placeholder, textarea::-moz-placeholder,textarea:-ms-input-placeholder,textarea::-ms-input-placeholder,textarea::placeholder{
+    padding: 60px;
+}
+
+/* design du bouton */
+input[type="submit"]{
+    width:300px;
+    margin:0 auto;
+    background-color: transparent;
+    color:#FFF;
+    cursor: pointer;
+    border:2px solid #FFF;
+}
+
+/***************************************************
+FOOTER
+***************************************************/
+
+/* barre de séparation du footer et espacement dans le footer */
+.foot{
+    border-top: 1px solid #737d82;
+    padding: 50px 0 60px 0;
+}
+/* le bloc qui contient le texte et les logos */
+.networks{
+    min-width: 430px;
+}
+/* Le texte avant les logos */
+.networks p{
+    font-size: 16px;
+    font-weight: 300;
+}
+/* Les logos réseaux sociaux */
+.logo a{
+    margin-right: 20px ;
+    border-radius: 50%;
+}
+/* Le copyright */
+small{
+    font-size: 12px;
+    font-weight: 400;
+}
